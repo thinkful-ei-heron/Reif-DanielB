@@ -86,12 +86,11 @@ const Database = {
     ]
   },
   findOne(query) {
-    let arr = this.store.heroes;
     let possible;
     let solution;
     for (let key in query) {
-      for (let i = 0; i < arr.length; i++) {
-        possible = arr.filter(e => e[key] === query[key]);
+      for (let i = 0; i < this.store.heroes.length; i++) {
+        possible = this.store.heroes.filter(e => e[key] === query[key]);
         //      console.log(possible)
       }
       if (solution === undefined) solution = possible;
