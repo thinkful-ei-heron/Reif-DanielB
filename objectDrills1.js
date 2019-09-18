@@ -1,24 +1,24 @@
 'use strict';
 
-function createMyObject(){
+function createMyObject() {
   return {
     foo: 'bar',
     answerToUniverse: 42,
     'olly olly': 'oxen free',
-    sayHello: function(){
-      return 'hello'
-    }
-  }
+    sayHello: function () {
+      return 'hello';
+    },
+  };
 }
 
-const test = createMyObject()
+const test = createMyObject();
 
-function updateObject(obj){
+function updateObject(obj) {
   obj.foo = 'foo',
-  obj.bar = 'bar',
-  obj.bizz = 'bizz',
-  obj.bang = 'bang'
+    obj.bar = 'bar',
+    obj.bizz = 'bizz',
+    obj.bang = 'bang';
 }
 
-updateObject(test)
-console.log(test)
+updateObject(test);
+console.log(test);
