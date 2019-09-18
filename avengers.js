@@ -1,3 +1,5 @@
+'use strict';
+
 const HEROES = [
   { id: 1, name: 'Captain America', squad: 'Avengers' },
   { id: 2, name: 'Iron Man', squad: 'Avengers' },
@@ -44,20 +46,20 @@ const HEROES = [
 //  console.log(valueArray);
 //}
 
-function findOne(arr, query){
+function findOne(arr, query) {
   let possible;
   let solution;
-  for(let key in query){
-    for(let i = 0; i < arr.length; i++){
+  for (let key in query) {
+    for (let i = 0; i < arr.length; i++) {
       possible = arr.filter(e => e[key] === query[key]);
-//      console.log(possible)
+      //      console.log(possible)
     }
-    if(solution === undefined) solution = possible;
-    if(solution[0] === undefined)return console.log('null');
+    if (solution === undefined) solution = possible;
+    if (solution[0] === undefined) return console.log('null');
   }
-  for(let key in solution){
-    for(let i = 0; i < possible.length; i++){
-      if(solution[0] === possible[i]){
+  for (let key in solution) {
+    for (let i = 0; i < possible.length; i++) {
+      if (solution[0] === possible[i]) {
         return console.log(solution[0])
       }
     }
