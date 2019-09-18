@@ -1,3 +1,5 @@
+'use strict';
+
 const sampleObj = {
   foo: 'foo',
   bar: 'bar',
