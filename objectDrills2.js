@@ -2,10 +2,9 @@
 
 function makeStudentsReport(data) {
   const resultsReport = [];
-  for(let i = 0; i < data.length; i++) {
-    const item = data[i];
-    resultsReport.push(`${item.name}: ${item.grade}`);
-  }
+  data.forEach(element => {
+    resultsReport.push(`${element.name}: ${element.grade}`)
+  });
   return resultsReport;  
 }  
 
