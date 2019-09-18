@@ -17,10 +17,13 @@ const hobbitFood = {
 };
 // console.log(hobbitFood.meals[3]);
 
-// Using array literal syntax, create an array characters that
-// calls your factory function for each character in the table
-// above with the relevant parameters.Your characters array
-// should now have 5 objects in it.
+let characters = [createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 5),
+createCharacter('Gimly', 'gimly', 'dwarf', 'Middle Earth', 5, 5),
+createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
+createCharacter('aragorn', 'aragorn', 'man', 'dunnedain', 6, 8),
+createCharacter('legolas', 'legolas', 'elf', 'woodland realm', 8, 5),
+createCharacter('Arwen Undomiel is a Half - Elf of Rivendell', 'arw', 'elf', 'forest realm', 5, 6)];
 
 function createCharacter(name, nickname, race, origin, attack, defense) {
   return {
@@ -39,9 +42,23 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
     }
   };
 }
-let gandalf = ['Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 5];
-let gimly = ['Gimly', 'gimly', 'dwarf', 'Middle Earth', 5, 5];
-let newGan = createCharacter(...gandalf);
-let newGim = createCharacter(...gimly);
 
-console.log(newGan.evaluateFight(newGim));
+// console.log(gandalf.evaluateFight(gimly));
+// Using the.find() function, retrieve your character nicknamed aragorn from characters and then call his describe method.
+// console.log(characters);
+let arrFind = characters.find((t) => {
+  return t.name === 'aragorn';
+});
+// console.log(arrFind);
+
+// Using the.filter() function, create a new array from characters that ONLY contains characters of the race Hobbit.
+let hobbits = characters.filter((r) => {
+  return r.race === 'Hobbit';
+});
+// console.log(hobbits);
+
+// Using the.filter() function, create a new array from characters that ONLY contains characters with attack value above 5.
+let fiveAttack = characters.filter(a => {
+  return a.attack > 5;
+});
+// console.log(fiveAttack);
