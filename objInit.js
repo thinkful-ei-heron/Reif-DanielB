@@ -17,11 +17,10 @@ const hobbitFood = {
 };
 // console.log(hobbitFood.meals[3]);
 
-// Each character should also have a method called evaluateFight that takes
-// in a character object and returns the following string:
-// "Your opponent takes {x} damage and you receive {y} damage"
-// where x and y are the differences between each characters
-// attack and defense values.If defense exceeds attack, then take zero damage.
+// Using array literal syntax, create an array characters that
+// calls your factory function for each character in the table
+// above with the relevant parameters.Your characters array
+// should now have 5 objects in it.
 
 function createCharacter(name, nickname, race, origin, attack, defense) {
   return {
@@ -35,15 +34,14 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
       `${this.name} is a ${this.race} from ${this.origin}`;
     },
     evaluateFight(otherChar) {
-      let damage = (otherChar.attack < this.defense) ? 0 : (otherChar.attack - this.defense);
-      console.log(damage);
-      return `Your opponent takes ${this.attack - otherChar.defense} damage and you receive ${damage} damage`;
+      const damage = (otherChar.attack > this.defense) ? otherChar.attack - this.defense : 0;
+      return `Your opponent takes ${this.attack} damage and you receive ${damage} damage`;
     }
   };
 }
-let gandalf = ['Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6];
+let gandalf = ['Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 5];
 let gimly = ['Gimly', 'gimly', 'dwarf', 'Middle Earth', 5, 5];
-let newGan = createCharacter(gandalf);
-let newGum = createCharacter(gimly);
+let newGan = createCharacter(...gandalf);
+let newGim = createCharacter(...gimly);
 
-console.log(newGan.evaluateFight(gimly));
+console.log(newGan.evaluateFight(newGim));
