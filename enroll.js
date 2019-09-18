@@ -20,12 +20,10 @@ const studentData = [
 
 function enrollInSummerSchool(students) {
   // your code here
-  let result = [];
   students.forEach(stu => {
     stu.status = 'In Summer school';
-    result.push(stu);
   });
-  return result;
+  return students;
 }
 
 /* From here down, you are not expected to understand.... for now :)
