@@ -22,11 +22,10 @@ function enrollInSummerSchool(students) {
   // your code here
   let result = [];
   students.forEach(stu => {
-    stu.status = 'In  Summer school';
+    stu.status = 'In Summer school';
     result.push(stu);
   });
-  // return result;
-  console.log(result);
+  return result;
 }
 
 /* From here down, you are not expected to understand.... for now :)
