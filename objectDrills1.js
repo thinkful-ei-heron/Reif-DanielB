@@ -1,4 +1,4 @@
-function createMyObject(obj){
+function createMyObject(){
   return {
     foo: 'bar',
     answerToUniverse: 42,
@@ -9,4 +9,14 @@ function createMyObject(obj){
   }
 }
 
-createMyObject('test')
+const test = createMyObject()
+
+function updateObject(obj){
+  obj.foo = 'foo',
+  obj.bar = 'bar',
+  obj.bizz = 'bizz',
+  obj.bang = 'bang'
+}
+
+updateObject(test)
+console.log(test)
