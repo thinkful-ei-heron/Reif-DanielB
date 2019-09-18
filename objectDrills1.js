@@ -1,3 +1,5 @@
+'use strict';
+
 function createMyObject(){
   return {
     foo: 'bar',
