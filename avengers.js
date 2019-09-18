@@ -62,11 +62,11 @@ function findOne(arr, query){
       }
     }
   }
-
+  return console.log('null')
 }
 
-//findOne(HEROES, { id: 2 })
-//findOne(HEROES, { id: 5, squad: 'Justice League' })
-//findOne(HEROES, { squad: 'Justice League' })
-//findOne(HEROES, { id: 100 })
+findOne(HEROES, { id: 2 })
+findOne(HEROES, { id: 5, squad: 'Justice League' })
+findOne(HEROES, { squad: 'Justice League' })
+findOne(HEROES, { id: 100 })
 findOne(HEROES, { id: 2, name: 'Aquaman' })
