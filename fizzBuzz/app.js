@@ -1,7 +1,7 @@
 'use strict';
 // your code here
 
-$(function () {
+$(function (handleFizzBuzz) {
   $('#number-chooser').submit(event => {
     event.stopPropagation();
     event.preventDefault();
@@ -30,3 +30,4 @@ $(function () {
     $('.js-results').append(results);
   });
 });
+$(handleFizzBuzz);
