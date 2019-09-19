@@ -1,27 +1,29 @@
 'use strict';
 // your code here
 
-$(function (handleFizzBuzz) {
+function handleFizzBuzz() {
   $('#number-chooser').submit(event => {
     event.stopPropagation();
     event.preventDefault();
     let results = '';
+    let curReturn;
     let countTo = $('#number-choice').val();
     function fizzBuzz(counter) {
       for (let i = 1; i <= counter; i++) {
         switch (true) {
           case i % 3 === 0 && i % 5 === 0:
-            results += '<div class="fizz-buzz-item fizzbuzz"><span>fizzbuzz</span ></div >';
+            curReturn = 'fizzbuzz';
             break;
           case i % 3 === 0:
-            results += '<div class="fizz-buzz-item fizz"><span>fizz</span ></div >';
+            curReturn = 'fizz';
             break;
           case i % 5 === 0:
-            results += '<div class="fizz-buzz-item buzz"><span>buzz</span ></div >';
+            curReturn = 'buzz';
             break;
           default:
-            results += `<div class="fizz-buzz-item"><span>${i}</span ></div >`;
+            curReturn = i;
         }
+        results += `<div class="fizz-buzz-item ${curReturn}"><span>${curReturn}</span ></div >`;
       }
       // console.log(results);
       return results;
@@ -29,5 +31,5 @@ $(function (handleFizzBuzz) {
     fizzBuzz(countTo);
     $('.js-results').append(results);
   });
-});
-$(handleFizzBuzz);
+}
+handleFizzBuzz();
