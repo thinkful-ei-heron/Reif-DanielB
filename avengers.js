@@ -60,11 +60,11 @@ function findOne(arr, query) {
   for (let key in solution) {
     for (let i = 0; i < possible.length; i++) {
       if (solution[0] === possible[i]) {
-        return console.log(solution[0])
+        return console.log(solution[0]);
       }
     }
   }
-  return console.log('null')
+  return console.log('null');
 }
 
 // findOne(HEROES, { id: 2 })
