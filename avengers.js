@@ -1,14 +1,14 @@
 'use strict';
 
-const HEROES = [
-  { id: 1, name: 'Captain America', squad: 'Avengers' },
-  { id: 2, name: 'Iron Man', squad: 'Avengers' },
-  { id: 3, name: 'Spiderman', squad: 'Avengers' },
-  { id: 4, name: 'Superman', squad: 'Justice League' },
-  { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
-  { id: 6, name: 'Aquaman', squad: 'Justice League' },
-  { id: 7, name: 'Hulk', squad: 'Avengers' },
-];
+// const HEROES = [
+//   { id: 1, name: 'Captain America', squad: 'Avengers' },
+//   { id: 2, name: 'Iron Man', squad: 'Avengers' },
+//   { id: 3, name: 'Spiderman', squad: 'Avengers' },
+//   { id: 4, name: 'Superman', squad: 'Justice League' },
+//   { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
+//   { id: 6, name: 'Aquaman', squad: 'Justice League' },
+//   { id: 7, name: 'Hulk', squad: 'Avengers' },
+// ];
 
 
 //function findOne(arr, query){
@@ -46,26 +46,26 @@ const HEROES = [
 //  console.log(valueArray);
 //}
 
-function findOne(arr, query) {
-  let possible;
-  let solution;
-  for (let key in query) {
-    for (let i = 0; i < arr.length; i++) {
-      possible = arr.filter(e => e[key] === query[key]);
-      //      console.log(possible)
-    }
-    if (solution === undefined) solution = possible;
-    if (solution[0] === undefined) return console.log('null');
-  }
-  for (let key in solution) {
-    for (let i = 0; i < possible.length; i++) {
-      if (solution[0] === possible[i]) {
-        return console.log(solution[0]);
-      }
-    }
-  }
-  return console.log('null');
-}
+// function findOne(arr, query) {
+//   let possible;
+//   let solution;
+//   for (let key in query) {
+//     for (let i = 0; i < arr.length; i++) {
+//       possible = arr.filter(e => e[key] === query[key]);
+//       //      console.log(possible)
+//     }
+//     if (solution === undefined) solution = possible;
+//     if (solution[0] === undefined) return console.log('null');
+//   }
+//   for (let key in solution) {
+//     for (let i = 0; i < possible.length; i++) {
+//       if (solution[0] === possible[i]) {
+//         return console.log(solution[0]);
+//       }
+//     }
+//   }
+//   return console.log('null');
+// }
 
 // findOne(HEROES, { id: 2 })
 // findOne(HEROES, { id: 5, squad: 'Justice League' })
@@ -99,7 +99,7 @@ const Database = {
     for (let key in solution) {
       for (let i = 0; i < possible.length; i++) {
         if (solution[0] === possible[i]) {
-          return console.log(solution[0])
+          return console.log(solution[0]);
         }
       }
     }
